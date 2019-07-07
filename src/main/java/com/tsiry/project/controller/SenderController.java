@@ -16,11 +16,6 @@ public class SenderController {
     @Autowired
     private Receiver receiver;
 
-    @GetMapping("/{name}")
-    public String sayHello(@PathVariable String name) {
-        return "Hello " + name;
-    }
-
     @GetMapping("/sendTopic/{name}")
     public String senHelloTo(@PathVariable String name) {
         sender.send(name);
